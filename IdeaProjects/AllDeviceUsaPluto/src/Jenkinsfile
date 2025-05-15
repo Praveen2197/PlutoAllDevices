@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Praveen2197/YourRepoName.git'
+                git branch: 'main', url: 'https://github.com/Praveen2197/PlutoAllDevices.git'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'  // Use 'sh' if Linux agent
+                bat 'mvn clean compile'
             }
         }
 
         stage('Run Multi-Device Test') {
             steps {
-                bat 'mvn test -Dtest=AllDeviceAutomationUS'  // Replace with your actual test class
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
             }
         }
     }
