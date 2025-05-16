@@ -1,0 +1,7 @@
+<suite name="MultiDeviceSuite">
+    <test name="AllDeviceTest">
+        <classes>
+            <class name="Allcodeusa.AllDeviceAutomationUS"/>
+        </classes>
+    </test>
+</suite>
